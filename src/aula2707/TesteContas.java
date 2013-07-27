@@ -20,10 +20,19 @@ public class TesteContas {
         c.atualiza(0.01);
         cc.atualiza(0.01);
         cp.atualiza(0.01);
-        System.out.println(c.getSaldo());
-        System.out.println(cc.getSaldo());
-        System.out.println(cp.getSaldo());
+        System.out.println("Saldo Conta:" + c.getSaldo());
+        System.out.println("---------------------");
+        System.out.println("Saldo Conta Corrente:" + cc.getSaldo());
+        System.out.println("---------------------");
+        System.out.println("Saldo Conta Poupança:" + cp.getSaldo());
+        System.out.println("---------------------");
         
-    }
+        AtualizadorDeContas adc = new AtualizadorDeContas(0.01);
+        adc.roda(c);
+        System.out.println("---------------------");
+        adc.roda(cc);
+        System.out.println("---------------------");
+        adc.roda(cp);
+}
     
 }
